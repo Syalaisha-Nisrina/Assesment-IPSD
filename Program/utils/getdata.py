@@ -19,7 +19,7 @@ class Data(Dataset):
                 img_path = os.path.join(class_folder, img_name)
 
                 # Membaca dan memproses gambar
-                image = cv.resize(cv.imread(img_path), (200, 200)) / 255  # Normalisasi
+                image = cv.resize(cv.imread(img_path), (32, 32) / 255  
                 self.dataset.append([image, onehot[class_idx]])
 
         # Menampilkan dataset yang telah dimuat
